@@ -7,12 +7,16 @@ const correctAnswers=["90","right angle"];
 function calculateScore(){
     let score=0;
     let index=0;
+    let message="";
     const formResults=new FormData(quizForm);
     for(let value of formResults.values()){
+        // if(value==="") {message="Pls mark all the questions.";break;}
+        
         if(value===correctAnswers[index]) score++;
         index++;
     }
     // console.log(score);
-    outputEl.innerText="Your score is :"+score;
+    message="Your score is :"+score;
+    outputEl.innerText=message;
 }
 submitButton.addEventListener("click",calculateScore);
