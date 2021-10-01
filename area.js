@@ -5,7 +5,8 @@ const outputEl=document.querySelector("#output");
 
 function calculateArea(){
     const area= (parseInt(base.value)*parseInt(height.value))/2;
-    outputEl.innerText="The area is :"+area;
+    if(Number(base.value)<0||Number(height.value)<0) outputEl.innerText="Base or Height can't be negative.";
+    else outputEl.innerText="The area is :"+area;
 }
 
 Areabutton.addEventListener("click",calculateArea);
