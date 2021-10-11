@@ -9,7 +9,7 @@ function isTraingle(){
     var message;
     if(sumOfAngles==180) message="Yay, the angles form a traingle";
     else message="Oh!!The angles don't form a triangle";
-    if(Number(inputs[0].value)<0 || Number(inputs[1].value||inputs[2].value)) message="Inputs can't be negative";
+    if(Number(inputs[0].value)<0 || Number(inputs[1].value<0||inputs[2].value<0)) message="Inputs can't be negative";
     outputEl.innerText=message;
 }
 isTraingleButton.addEventListener("click",isTraingle);
